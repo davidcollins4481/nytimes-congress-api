@@ -13,6 +13,7 @@
 
 @end
 
+#define PERSONAL_API_KEY @"430d5cc18be42a10d8dd643a0508efea:12:66347810"
 #define API_KEY @"8d5a094b165e6d9d570f6640b4301b45:19:66347810"
 
 #import "NYTimesAPIRequest.h";
@@ -33,24 +34,31 @@
 
 - (void)testBasicHTTPRequest
 {
-    [super setUp];
     dispatch_semaphore_t holdOn = dispatch_semaphore_create(0);
+    NSString *url = @"http://api.nytimes.com/svc/politics/v3/us/legislative/congress/113/house/bills/passed.json?api-key=";
+    url = [url stringByAppendingString:PERSONAL_API_KEY];
     
-    [NYTimesAPIRequest asyncRequest:@"http://www.google.com"
+    [NYTimesAPIRequest asyncRequest:url
                              params:nil
-                          onsuccess:^(NSURLResponse* response) {
-                              NSLog(@"*****bow!*******");
+                          onsuccess:^(NSURLResponse* response, NSData* urlData) {
+                              NSError *jsonParsingError = nil;
+
+                              NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:urlData options:0 error:&jsonParsingError];
+
+                              if (jsonParsingError) {
+                                  NSLog(@"JSON ERROR: %@", [jsonParsingError localizedDescription]);
+                              } else {
+                                  NSString *status = [dict objectForKey:@"status"];
+                                  XCTAssertTrue([status isEqualToString:(@"OK")], @"API call successful");
+                              }
                               dispatch_semaphore_signal(holdOn);
                           }
                             onerror:^(NSURLResponse* response, NSError *error) {
+                                XCTFail(@"API Request failed");
                                 dispatch_semaphore_signal(holdOn);
                             }];
 
-
     dispatch_semaphore_wait(holdOn, DISPATCH_TIME_FOREVER);
-
-    
-
 }
 
 @end

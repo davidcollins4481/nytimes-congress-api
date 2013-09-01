@@ -18,22 +18,24 @@
     NSURL *apiUrl = [NSURL URLWithString:url];
     NSURLRequest *request = [NSURLRequest requestWithURL:apiUrl];
 
-    //NSString *s = @"asda";
     [NSURLConnection sendAsynchronousRequest:request
                              queue:[[NSOperationQueue alloc] init]//[NSOperationQueue mainQueue]
                  completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
-                     NSLog(@"wiwiiwiw");
-                     if (error) {
-                         // fire error handler
-                         NSLog(@"error:%@", error.localizedDescription);
-                         onerror(response, error);
-                     } else {
+                     // TODO: better response handling. See:
+                     // http://stackoverflow.com/questions/9270447/how-to-use-sendasynchronousrequestqueuecompletionhandler
+
+                     NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
+                     NSInteger status = [httpResponse statusCode];
+
+                     if (status == 200) {
                          // fire success handles
-                         NSLog(@"SUCCESS");
-                         onsuccess(response);
+                         NSLog(@"success");
+                         onsuccess(response, data);
+                     } else {
+                        NSLog(@"error:%@", error.localizedDescription);
+                         onerror(response, error);
                      }
                  }];
-
 }
 
 

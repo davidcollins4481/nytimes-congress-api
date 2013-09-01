@@ -11,7 +11,7 @@
 @interface NYTimesAPIRequest : NSObject
 
 /* Not sure if these will actually go here */
-typedef void(^APIRequestSuccessCallback)(NSURLResponse* response);
+typedef void(^APIRequestSuccessCallback)(NSURLResponse* response, NSData *data);
 typedef void(^APIRequestErrorCallback)(NSURLResponse* response, NSError *error);
 
 + (void) asyncRequest:(NSString*) url
