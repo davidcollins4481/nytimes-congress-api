@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 David Collins. All rights reserved.
 //
 
-#import "NYTimesAPIRequest.h"
+#import "NYTAPIRequest.h"
 
-@implementation NYTimesAPIRequest
+@implementation NYTAPIRequest
 
 + (void) asyncRequest: (NSString*) url
                    params:(NSDictionary *)params
@@ -32,7 +32,7 @@
                          NSLog(@"success");
                          onsuccess(response, data);
                      } else {
-                        NSLog(@"error:%@", error.localizedDescription);
+                         NSLog(@"error:%@", error.localizedDescription);
                          onerror(response, error);
                      }
                  }];

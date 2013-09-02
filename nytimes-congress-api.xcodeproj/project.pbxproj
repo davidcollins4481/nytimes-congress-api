@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C91EDC8217D4F23200E98072 /* NYTChamber.m in Sources */ = {isa = PBXBuildFile; fileRef = C91EDC8117D4F23200E98072 /* NYTChamber.m */; };
+		C9B913DC17D3B5AA009F9EB2 /* NYTSenate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B913DB17D3B5AA009F9EB2 /* NYTSenate.m */; };
+		C9B913DF17D3D3AE009F9EB2 /* NYTMember.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B913DE17D3D3AE009F9EB2 /* NYTMember.m */; };
+		C9B913E217D3D3E3009F9EB2 /* NYTSenator.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B913E117D3D3E3009F9EB2 /* NYTSenator.m */; };
+		C9B913E417D3E096009F9EB2 /* NYTSenateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B913E317D3E096009F9EB2 /* NYTSenateTests.m */; };
 		C9DA94C117D294C800A0E71C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DA94C017D294C800A0E71C /* Foundation.framework */; };
 		C9DA94C617D294C800A0E71C /* nytimes_congress_api.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C9DA94C517D294C800A0E71C /* nytimes_congress_api.h */; };
 		C9DA94C817D294C800A0E71C /* nytimes_congress_api.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DA94C717D294C800A0E71C /* nytimes_congress_api.m */; };
@@ -16,8 +21,8 @@
 		C9DA94D517D294C800A0E71C /* libnytimes-congress-api.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DA94BD17D294C800A0E71C /* libnytimes-congress-api.a */; };
 		C9DA94DB17D294C800A0E71C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9DA94D917D294C800A0E71C /* InfoPlist.strings */; };
 		C9DA94DD17D294C800A0E71C /* nytimes_congress_apiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DA94DC17D294C800A0E71C /* nytimes_congress_apiTests.m */; };
-		C9DA94E817D296F800A0E71C /* Congress.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DA94E717D296F800A0E71C /* Congress.m */; };
-		C9DA94EB17D2987400A0E71C /* NYTimesAPIRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DA94EA17D2987400A0E71C /* NYTimesAPIRequest.m */; };
+		C9DA94E817D296F800A0E71C /* NYTCongress.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DA94E717D296F800A0E71C /* NYTCongress.m */; };
+		C9DA94EB17D2987400A0E71C /* NYTAPIRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DA94EA17D2987400A0E71C /* NYTAPIRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C91EDC8017D4F23200E98072 /* NYTChamber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTChamber.h; sourceTree = "<group>"; };
+		C91EDC8117D4F23200E98072 /* NYTChamber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYTChamber.m; sourceTree = "<group>"; };
+		C9B913DA17D3B5AA009F9EB2 /* NYTSenate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTSenate.h; sourceTree = "<group>"; };
+		C9B913DB17D3B5AA009F9EB2 /* NYTSenate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYTSenate.m; sourceTree = "<group>"; };
+		C9B913DD17D3D3AE009F9EB2 /* NYTMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTMember.h; sourceTree = "<group>"; };
+		C9B913DE17D3D3AE009F9EB2 /* NYTMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYTMember.m; sourceTree = "<group>"; };
+		C9B913E017D3D3E3009F9EB2 /* NYTSenator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTSenator.h; sourceTree = "<group>"; };
+		C9B913E117D3D3E3009F9EB2 /* NYTSenator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYTSenator.m; sourceTree = "<group>"; };
+		C9B913E317D3E096009F9EB2 /* NYTSenateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYTSenateTests.m; sourceTree = "<group>"; };
 		C9DA94BD17D294C800A0E71C /* libnytimes-congress-api.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libnytimes-congress-api.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9DA94C017D294C800A0E71C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C9DA94C417D294C800A0E71C /* nytimes-congress-api-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "nytimes-congress-api-Prefix.pch"; sourceTree = "<group>"; };
@@ -55,10 +69,10 @@
 		C9DA94D817D294C800A0E71C /* nytimes-congress-apiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "nytimes-congress-apiTests-Info.plist"; sourceTree = "<group>"; };
 		C9DA94DA17D294C800A0E71C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C9DA94DC17D294C800A0E71C /* nytimes_congress_apiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = nytimes_congress_apiTests.m; sourceTree = "<group>"; };
-		C9DA94E617D296F800A0E71C /* Congress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Congress.h; sourceTree = "<group>"; };
-		C9DA94E717D296F800A0E71C /* Congress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Congress.m; sourceTree = "<group>"; };
-		C9DA94E917D2987400A0E71C /* NYTimesAPIRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTimesAPIRequest.h; sourceTree = "<group>"; };
-		C9DA94EA17D2987400A0E71C /* NYTimesAPIRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYTimesAPIRequest.m; sourceTree = "<group>"; };
+		C9DA94E617D296F800A0E71C /* NYTCongress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTCongress.h; sourceTree = "<group>"; };
+		C9DA94E717D296F800A0E71C /* NYTCongress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYTCongress.m; sourceTree = "<group>"; };
+		C9DA94E917D2987400A0E71C /* NYTAPIRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTAPIRequest.h; sourceTree = "<group>"; };
+		C9DA94EA17D2987400A0E71C /* NYTAPIRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYTAPIRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,11 +132,19 @@
 			children = (
 				C9DA94C517D294C800A0E71C /* nytimes_congress_api.h */,
 				C9DA94C717D294C800A0E71C /* nytimes_congress_api.m */,
+				C91EDC8017D4F23200E98072 /* NYTChamber.h */,
+				C91EDC8117D4F23200E98072 /* NYTChamber.m */,
 				C9DA94C317D294C800A0E71C /* Supporting Files */,
-				C9DA94E617D296F800A0E71C /* Congress.h */,
-				C9DA94E717D296F800A0E71C /* Congress.m */,
-				C9DA94E917D2987400A0E71C /* NYTimesAPIRequest.h */,
-				C9DA94EA17D2987400A0E71C /* NYTimesAPIRequest.m */,
+				C9DA94E617D296F800A0E71C /* NYTCongress.h */,
+				C9B913DA17D3B5AA009F9EB2 /* NYTSenate.h */,
+				C9B913DD17D3D3AE009F9EB2 /* NYTMember.h */,
+				C9B913DE17D3D3AE009F9EB2 /* NYTMember.m */,
+				C9B913DB17D3B5AA009F9EB2 /* NYTSenate.m */,
+				C9B913E017D3D3E3009F9EB2 /* NYTSenator.h */,
+				C9B913E117D3D3E3009F9EB2 /* NYTSenator.m */,
+				C9DA94E717D296F800A0E71C /* NYTCongress.m */,
+				C9DA94E917D2987400A0E71C /* NYTAPIRequest.h */,
+				C9DA94EA17D2987400A0E71C /* NYTAPIRequest.m */,
 			);
 			path = "nytimes-congress-api";
 			sourceTree = "<group>";
@@ -140,6 +162,7 @@
 			children = (
 				C9DA94DC17D294C800A0E71C /* nytimes_congress_apiTests.m */,
 				C9DA94D717D294C800A0E71C /* Supporting Files */,
+				C9B913E317D3E096009F9EB2 /* NYTSenateTests.m */,
 			);
 			path = "nytimes-congress-apiTests";
 			sourceTree = "<group>";
@@ -234,9 +257,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C91EDC8217D4F23200E98072 /* NYTChamber.m in Sources */,
 				C9DA94C817D294C800A0E71C /* nytimes_congress_api.m in Sources */,
-				C9DA94E817D296F800A0E71C /* Congress.m in Sources */,
-				C9DA94EB17D2987400A0E71C /* NYTimesAPIRequest.m in Sources */,
+				C9DA94E817D296F800A0E71C /* NYTCongress.m in Sources */,
+				C9B913E217D3D3E3009F9EB2 /* NYTSenator.m in Sources */,
+				C9DA94EB17D2987400A0E71C /* NYTAPIRequest.m in Sources */,
+				C9B913DC17D3B5AA009F9EB2 /* NYTSenate.m in Sources */,
+				C9B913DF17D3D3AE009F9EB2 /* NYTMember.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9DA94DD17D294C800A0E71C /* nytimes_congress_apiTests.m in Sources */,
+				C9B913E417D3E096009F9EB2 /* NYTSenateTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +443,7 @@
 				C9DA94E217D294C800A0E71C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9DA94E317D294C800A0E71C /* Build configuration list for PBXNativeTarget "nytimes-congress-apiTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +452,7 @@
 				C9DA94E517D294C800A0E71C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

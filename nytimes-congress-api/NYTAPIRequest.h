@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NYTimesAPIRequest : NSObject
+@interface NYTAPIRequest : NSObject
 
 /* Not sure if these will actually go here */
 typedef void(^APIRequestSuccessCallback)(NSURLResponse* response, NSData *data);

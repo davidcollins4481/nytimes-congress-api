@@ -10,4 +10,9 @@
 
 @interface nytimes_congress_api : NSObject
 
+extern NSString *const API_KEY;
+extern NSString *const CONGRESS_API_VERSION;
+extern NSString *const CURRENT_CONGRESS;
+extern NSString *const API_BASE_URL;
+
 @end

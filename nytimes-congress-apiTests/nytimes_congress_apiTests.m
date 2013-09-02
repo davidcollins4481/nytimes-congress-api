@@ -13,10 +13,9 @@
 
 @end
 
-#define PERSONAL_API_KEY @"430d5cc18be42a10d8dd643a0508efea:12:66347810"
-#define API_KEY @"8d5a094b165e6d9d570f6640b4301b45:19:66347810"
 
-#import "NYTimesAPIRequest.h";
+#import "NYTAPIRequest.h"
+#import "nytimes_congress_api.h"
 
 @implementation nytimes_congress_apiTests
 
@@ -32,13 +31,13 @@
     [super tearDown];
 }
 
-- (void)testBasicHTTPRequest
+- (void)testBasicAPIRequest
 {
     dispatch_semaphore_t holdOn = dispatch_semaphore_create(0);
     NSString *url = @"http://api.nytimes.com/svc/politics/v3/us/legislative/congress/113/house/bills/passed.json?api-key=";
-    url = [url stringByAppendingString:PERSONAL_API_KEY];
+    url = [url stringByAppendingString:API_KEY];
     
-    [NYTimesAPIRequest asyncRequest:url
+    [NYTAPIRequest asyncRequest:url
                              params:nil
                           onsuccess:^(NSURLResponse* response, NSData* urlData) {
                               NSError *jsonParsingError = nil;
