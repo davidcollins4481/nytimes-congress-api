@@ -10,6 +10,14 @@
 
 @implementation NYTChamber
 
+- (NSMutableArray*) getMembers
+{
+    return members;
+}
 
+- (void) addMember:(NYTMember *)member
+{
+    [members addObject:member];
+}
 
 @end

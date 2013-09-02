@@ -58,7 +58,9 @@
                               NSDictionary *results = [dict objectForKey:@"results"][0];
                               NSDictionary *members = [results objectForKey:@"members"];
                               for (NSDictionary * senator in members) {
-                                  NSLog([senator objectForKey:@"last_name"]);
+                                  NYTMember * member = [[NYTMember alloc] init];
+                                  [member setFirstName:[senator objectForKey:@"last_name"]];
+                                  [self addMember:member];
                               }
                           }
 

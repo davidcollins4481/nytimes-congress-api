@@ -14,6 +14,7 @@
 }
 
 - (NSMutableArray*) members;
+- (NSMutableArray*) getMembers;
 - (void) addMember: (NYTMember *) member;
 
 @end
