@@ -7,14 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NYTAPIRequest.h"
 #import "NYTSenator.h"
 #import "NYTChamber.h"
 
 @interface NYTSenate : NYTChamber
-
-- (id) initWithCallbacksOnSuccess: (APIRequestSuccessCallback) onSuccess
-                         onError:(APIRequestErrorCallback) onError;
-
 
 @end

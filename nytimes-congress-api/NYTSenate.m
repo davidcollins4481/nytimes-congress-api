@@ -7,31 +7,10 @@
 //
 
 #import "NYTSenate.h"
-#import "nytimes_congress_api.h"
-#import "NYTAPIRequest.h"
-
-@interface NYTSenate ()
-
-- (void) makeCall: (APIRequestSuccessCallback) onsuccess onError: (APIRequestErrorCallback)onerror;
-
-@end
 
 @implementation NYTSenate
 
-- (id) init
-{
-    self = [super init];
-    [self makeCall: nil onError: nil];
-    return self;
-}
-
-- (id) initWithCallbacksOnSuccess:(APIRequestSuccessCallback)onSuccess onError:(APIRequestErrorCallback) onError
-{
-    self = [super init];
-    [self makeCall: onSuccess onError: onError];
-    return self;
-}
-
+// TODO: Refactor this into NYTChamber.h
 // http://api.nytimes.com/svc/politics/v3/us/legislative/congress/113/senate/members.json?api-key=430d5cc18be42a10d8dd643a0508efea:12:66347810
 - (void) makeCall: (APIRequestSuccessCallback) onSuccess
           onError: (APIRequestErrorCallback) onError {

@@ -7,21 +7,43 @@
 //
 
 #import "NYTChamber.h"
+#import "NYTAPIRequest.h"
 
+// private!!
 @interface NYTChamber ()
-@property (nonatomic, retain) NSMutableArray* members; // private!!
+- (void) makeCall: (APIRequestSuccessCallback) onsuccess onError: (APIRequestErrorCallback)onerror;
 @end
 
 @implementation NYTChamber
 
+@synthesize members = _members;
+
+- (id) init
+{
+    self = [super init];
+    [self makeCall: nil onError: nil];
+    return self;
+}
+
+- (id) initWithCallbacksOnSuccess:(APIRequestSuccessCallback)onSuccess onError:(APIRequestErrorCallback) onError
+{
+    self = [super init];
+    if (!_members) {
+        _members = [[NSMutableArray alloc] initWithCapacity:150];
+    }
+    [self makeCall: onSuccess onError: onError];
+    return self;
+}
+
 - (NSMutableArray*) getMembers
 {
-    return [self getMembers];
+    return [self members];
 }
 
 - (void) addMember:(NYTMember *)member
 {
-    [[self getMembers] insertObject:member atIndex:[[self getMembers] count]];
+    // TODO: put at end
+    [[self getMembers] insertObject:member atIndex:0];
 }
 
 

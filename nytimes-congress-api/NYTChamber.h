@@ -8,8 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "NYTMember.h"
+#import "NYTAPIRequest.h"
+#import "nytimes_congress_api.h"
 
 @interface NYTChamber : NSObject
+
+@property (nonatomic, strong) NSMutableArray* members;
+
+- (id) initWithCallbacksOnSuccess: (APIRequestSuccessCallback) onSuccess
+                          onError:(APIRequestErrorCallback) onError;
 
 - (NSMutableArray*) getMembers;
 - (void) addMember: (NYTMember *) member;
