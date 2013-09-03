@@ -9,11 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "NYTMember.h"
 
-@interface NYTChamber : NSObject {
-    NSMutableArray *members;
-}
+@interface NYTChamber : NSObject
 
-- (NSMutableArray*) members;
 - (NSMutableArray*) getMembers;
 - (void) addMember: (NYTMember *) member;
 

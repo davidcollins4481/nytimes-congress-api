@@ -15,6 +15,7 @@
 @property NSString* lastName;
 @property NSString* party;
 @property NSString* state;
+// FIXME: only house members have a district
 @property NSString* district;
 
 @end

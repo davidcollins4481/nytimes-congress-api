@@ -42,8 +42,13 @@ NYTSenate *senate;
 
 - (void)testExample
 {
+    @synchronized(self) {
+        NSMutableArray* senateMembers = [senate getMembers];
+        for (NYTSenator *senator in senateMembers) {
+            NSLog(@"First name: %@", [senator lastName]);
+        }
+    }
 
-    
 }
 
 @end

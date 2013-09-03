@@ -1,20 +1,18 @@
 //
-//  Senate.h
+//  NYTHouseOfRepresentatives.h
 //  nytimes-congress-api
 //
-//  Created by David Collins on 9/1/13.
+//  Created by David Collins on 9/2/13.
 //  Copyright (c) 2013 David Collins. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "NYTAPIRequest.h"
 #import "NYTSenator.h"
 #import "NYTChamber.h"
 
-@interface NYTSenate : NYTChamber
+@interface NYTHouseOfRepresentatives : NYTChamber
 
 - (id) initWithCallbacksOnSuccess: (APIRequestSuccessCallback) onSuccess
-                         onError:(APIRequestErrorCallback) onError;
-
+                          onError:(APIRequestErrorCallback) onError;
 
 @end

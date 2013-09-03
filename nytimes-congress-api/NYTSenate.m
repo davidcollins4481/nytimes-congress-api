@@ -12,7 +12,7 @@
 
 @interface NYTSenate ()
 
-- (void) makeCall: (APIRequestSuccessCallback) onsuccess onerror: (APIRequestErrorCallback)onerror;
+- (void) makeCall: (APIRequestSuccessCallback) onsuccess onError: (APIRequestErrorCallback)onerror;
 
 @end
 
@@ -56,10 +56,17 @@
                               NSLog(@"JSON ERROR: %@", [jsonParsingError localizedDescription]);
                           } else {
                               NSDictionary *results = [dict objectForKey:@"results"][0];
-                              NSDictionary *members = [results objectForKey:@"members"];
-                              for (NSDictionary * senator in members) {
-                                  NYTMember * member = [[NYTMember alloc] init];
-                                  [member setFirstName:[senator objectForKey:@"last_name"]];
+                              NSDictionary *senateMembers = [results objectForKey:@"members"];
+                              for (NSDictionary * senator in senateMembers) {
+                                  NYTMember *member = [[NYTMember alloc] init];
+                                  // NOTE: haven't decided on which properties will be standard
+                                  // so setting these all individually for now
+                                  [member setFirstName:[senator objectForKey:@"first_name"]];
+                                  [member setMemberId:[senator objectForKey:@"id"]];
+                                  [member setLastName:[senator objectForKey:@"last_name"]];
+                                  [member setParty:[senator objectForKey:@"party"]];
+                                  [member setState:[senator objectForKey:@"state"]];
+                                  //[member setDistrict: [senator objectForKey:@"district"]];
                                   [self addMember:member];
                               }
                           }
@@ -73,11 +80,6 @@
                                 onError(response, error);
                             }
                         }];
-    
-}
-
-- (void) addMember: (NYTMember*) member
-{
     
 }
 

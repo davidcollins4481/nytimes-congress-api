@@ -8,16 +8,21 @@
 
 #import "NYTChamber.h"
 
+@interface NYTChamber ()
+@property (nonatomic, retain) NSMutableArray* members; // private!!
+@end
+
 @implementation NYTChamber
 
 - (NSMutableArray*) getMembers
 {
-    return members;
+    return [self getMembers];
 }
 
 - (void) addMember:(NYTMember *)member
 {
-    [members addObject:member];
+    [[self getMembers] insertObject:member atIndex:[[self getMembers] count]];
 }
+
 
 @end
