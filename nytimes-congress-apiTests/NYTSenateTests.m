@@ -44,7 +44,7 @@ NYTSenate *senate;
 - (void) testStateMembers
 {
     NSMutableArray* OHSenators = [senate membersFromState:@"OH"];
-    XCTAssertTrue([OHSenators count] == 2, @"API call successful");
+    XCTAssertTrue([OHSenators count] == 2, @"Two Senators from Ohio");
 }
 
 @end

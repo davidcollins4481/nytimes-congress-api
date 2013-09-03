@@ -40,7 +40,7 @@
                               
                               NSDictionary *senateMembers = [results objectForKey:@"members"];
                               for (NSDictionary * senator in senateMembers) {
-                                  NYTMember *member = [[NYTMember alloc] init];
+                                  NYTSenator *member = [[NYTSenator alloc] init];
                                   // NOTE: haven't decided on which properties will be standard
                                   // so setting these all individually for now
                                   [member setFirstName:[senator objectForKey:@"first_name"]];

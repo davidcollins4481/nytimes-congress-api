@@ -37,6 +37,14 @@
                BlueprintName = "nytimes-congress-apiTests"
                ReferencedContainer = "container:nytimes-congress-api.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "nytimes_congress_apiTests">
+               </Test>
+               <Test
+                  Identifier = "NYTSenateTests">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
    </TestAction>

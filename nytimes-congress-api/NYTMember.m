@@ -15,7 +15,5 @@
 @synthesize lastName;
 @synthesize party;
 @synthesize state;
-//FIXME: only house members have a district
-@synthesize district;
 
 @end

@@ -11,7 +11,7 @@
 @implementation NYTHouseOfRepresentatives
 
 // TODO: Refactor this into NYTChamber.h
-// http://api.nytimes.com/svc/politics/v3/us/legislative/congress/113/senate/members.json?api-key=430d5cc18be42a10d8dd643a0508efea:12:66347810
+// http://api.nytimes.com/svc/politics/v3/us/legislative/congress/113/house/members.json?api-key=430d5cc18be42a10d8dd643a0508efea:12:66347810
 - (void) makeCall: (APIRequestSuccessCallback) onSuccess
           onError: (APIRequestErrorCallback) onError {
     
@@ -37,7 +37,7 @@
                               NSDictionary *results = [dict objectForKey:@"results"][0];
                               NSDictionary *houseMembers = [results objectForKey:@"members"];
                               for (NSDictionary * rep in houseMembers) {
-                                  NYTMember *member = [[NYTMember alloc] init];
+                                  NYTHouseRepresentative *member = [[NYTHouseRepresentative alloc] init];
                                   // NOTE: haven't decided on which properties will be standard
                                   // so setting these all individually for now
                                   [member setFirstName:[rep objectForKey:@"first_name"]];
@@ -45,7 +45,7 @@
                                   [member setLastName:[rep objectForKey:@"last_name"]];
                                   [member setParty:[rep objectForKey:@"party"]];
                                   [member setState:[rep objectForKey:@"state"]];
-                                  //[member setDistrict: [senator objectForKey:@"district"]];
+                                  [member setDistrict:[rep objectForKey:@"district"]];
                                   [self addMember:member];
                               }
                           }

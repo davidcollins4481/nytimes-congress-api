@@ -6,7 +6,6 @@
 //  Copyright (c) 2013 David Collins. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "NYTSenator.h"
 #import "NYTChamber.h"
 

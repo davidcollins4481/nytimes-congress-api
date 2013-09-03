@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		C91EDC8217D4F23200E98072 /* NYTChamber.m in Sources */ = {isa = PBXBuildFile; fileRef = C91EDC8117D4F23200E98072 /* NYTChamber.m */; };
 		C951E7A517D569DF00B3D851 /* NYTHouseOfRepresentatives.m in Sources */ = {isa = PBXBuildFile; fileRef = C951E7A417D569DF00B3D851 /* NYTHouseOfRepresentatives.m */; };
+		C951E7A717D5910D00B3D851 /* NYTHouseOfRepsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C951E7A617D5910D00B3D851 /* NYTHouseOfRepsTests.m */; };
+		C951E7AA17D5920300B3D851 /* NYTHouseRepresentative.m in Sources */ = {isa = PBXBuildFile; fileRef = C951E7A917D5920300B3D851 /* NYTHouseRepresentative.m */; };
 		C9B913DC17D3B5AA009F9EB2 /* NYTSenate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B913DB17D3B5AA009F9EB2 /* NYTSenate.m */; };
 		C9B913DF17D3D3AE009F9EB2 /* NYTMember.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B913DE17D3D3AE009F9EB2 /* NYTMember.m */; };
 		C9B913E217D3D3E3009F9EB2 /* NYTSenator.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B913E117D3D3E3009F9EB2 /* NYTSenator.m */; };
@@ -54,6 +56,9 @@
 		C91EDC8117D4F23200E98072 /* NYTChamber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYTChamber.m; sourceTree = "<group>"; };
 		C951E7A317D569DF00B3D851 /* NYTHouseOfRepresentatives.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTHouseOfRepresentatives.h; sourceTree = "<group>"; };
 		C951E7A417D569DF00B3D851 /* NYTHouseOfRepresentatives.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYTHouseOfRepresentatives.m; sourceTree = "<group>"; };
+		C951E7A617D5910D00B3D851 /* NYTHouseOfRepsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYTHouseOfRepsTests.m; sourceTree = "<group>"; };
+		C951E7A817D5920300B3D851 /* NYTHouseRepresentative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTHouseRepresentative.h; sourceTree = "<group>"; };
+		C951E7A917D5920300B3D851 /* NYTHouseRepresentative.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYTHouseRepresentative.m; sourceTree = "<group>"; };
 		C9B913DA17D3B5AA009F9EB2 /* NYTSenate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTSenate.h; sourceTree = "<group>"; };
 		C9B913DB17D3B5AA009F9EB2 /* NYTSenate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYTSenate.m; sourceTree = "<group>"; };
 		C9B913DD17D3D3AE009F9EB2 /* NYTMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTMember.h; sourceTree = "<group>"; };
@@ -139,6 +144,8 @@
 				C951E7A317D569DF00B3D851 /* NYTHouseOfRepresentatives.h */,
 				C951E7A417D569DF00B3D851 /* NYTHouseOfRepresentatives.m */,
 				C91EDC8117D4F23200E98072 /* NYTChamber.m */,
+				C951E7A817D5920300B3D851 /* NYTHouseRepresentative.h */,
+				C951E7A917D5920300B3D851 /* NYTHouseRepresentative.m */,
 				C9DA94C317D294C800A0E71C /* Supporting Files */,
 				C9DA94E617D296F800A0E71C /* NYTCongress.h */,
 				C9B913DA17D3B5AA009F9EB2 /* NYTSenate.h */,
@@ -168,6 +175,7 @@
 				C9DA94DC17D294C800A0E71C /* nytimes_congress_apiTests.m */,
 				C9DA94D717D294C800A0E71C /* Supporting Files */,
 				C9B913E317D3E096009F9EB2 /* NYTSenateTests.m */,
+				C951E7A617D5910D00B3D851 /* NYTHouseOfRepsTests.m */,
 			);
 			path = "nytimes-congress-apiTests";
 			sourceTree = "<group>";
@@ -265,6 +273,7 @@
 				C91EDC8217D4F23200E98072 /* NYTChamber.m in Sources */,
 				C9DA94C817D294C800A0E71C /* nytimes_congress_api.m in Sources */,
 				C9DA94E817D296F800A0E71C /* NYTCongress.m in Sources */,
+				C951E7AA17D5920300B3D851 /* NYTHouseRepresentative.m in Sources */,
 				C9B913E217D3D3E3009F9EB2 /* NYTSenator.m in Sources */,
 				C9DA94EB17D2987400A0E71C /* NYTAPIRequest.m in Sources */,
 				C9B913DC17D3B5AA009F9EB2 /* NYTSenate.m in Sources */,
@@ -279,6 +288,7 @@
 			files = (
 				C9DA94DD17D294C800A0E71C /* nytimes_congress_apiTests.m in Sources */,
 				C9B913E417D3E096009F9EB2 /* NYTSenateTests.m in Sources */,
+				C951E7A717D5910D00B3D851 /* NYTHouseOfRepsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

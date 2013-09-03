@@ -6,7 +6,6 @@
 //  Copyright (c) 2013 David Collins. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "NYTMember.h"
 
 @interface NYTSenator : NYTMember

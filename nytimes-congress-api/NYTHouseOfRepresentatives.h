@@ -6,8 +6,7 @@
 //  Copyright (c) 2013 David Collins. All rights reserved.
 //
 
-#import "NYTAPIRequest.h"
-#import "NYTSenator.h"
+#import "NYTHouseRepresentative.h"
 #import "NYTChamber.h"
 
 @interface NYTHouseOfRepresentatives : NYTChamber
