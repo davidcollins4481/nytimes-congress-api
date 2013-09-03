@@ -46,5 +46,17 @@
     [[self getMembers] insertObject:member atIndex:0];
 }
 
+- (NSMutableArray *) membersFromState: (NSString*) abbreviation
+{
+    NSMutableArray *stateMembers = [[NSMutableArray alloc] initWithCapacity:2];
+
+    for (NYTMember *m in [self getMembers]) {
+        if ([[m state] isEqualToString: abbreviation]) {
+            [stateMembers insertObject:m atIndex:0];
+        }
+    }
+
+    return stateMembers;
+}
 
 @end

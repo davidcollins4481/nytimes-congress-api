@@ -18,7 +18,9 @@
 - (id) initWithCallbacksOnSuccess: (APIRequestSuccessCallback) onSuccess
                           onError:(APIRequestErrorCallback) onError;
 
-- (NSMutableArray*) getMembers;
+//- (NSMutableArray*) getMembers;
 - (void) addMember: (NYTMember *) member;
 
+// Ex: OH, ME
+- (NSMutableArray *) membersFromState: (NSString*) abbreviation;
 @end

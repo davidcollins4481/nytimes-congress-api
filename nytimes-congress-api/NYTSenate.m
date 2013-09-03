@@ -35,6 +35,9 @@
                               NSLog(@"JSON ERROR: %@", [jsonParsingError localizedDescription]);
                           } else {
                               NSDictionary *results = [dict objectForKey:@"results"][0];
+                              // set the number of members
+                              
+                              
                               NSDictionary *senateMembers = [results objectForKey:@"members"];
                               for (NSDictionary * senator in senateMembers) {
                                   NYTMember *member = [[NYTMember alloc] init];

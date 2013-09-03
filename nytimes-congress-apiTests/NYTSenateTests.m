@@ -28,6 +28,7 @@ NYTSenate *senate;
                   dispatch_semaphore_signal(holdOn);
               }
               onError: ^(NSURLResponse* response, NSError *error) {
+                  XCTFail(@"Error in API Request");
                   dispatch_semaphore_signal(holdOn);
               }];
     
@@ -40,15 +41,10 @@ NYTSenate *senate;
     [super tearDown];
 }
 
-- (void)testExample
+- (void) testStateMembers
 {
-
-    NSMutableArray* senateMembers = [senate getMembers];
-    for (NYTSenator *senator in senateMembers) {
-        NSLog(@"First name: %@", [senator lastName]);
-    }
-
-
+    NSMutableArray* OHSenators = [senate membersFromState:@"OH"];
+    XCTAssertTrue([OHSenators count] == 2, @"API call successful");
 }
 
 @end
