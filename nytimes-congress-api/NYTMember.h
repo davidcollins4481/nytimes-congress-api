@@ -7,13 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NYTAPIRequest.h"
+#import "nytimes_congress_api.h"
+#import "NYTVote.h"
 
 @interface NYTMember : NSObject
+
+@property (nonatomic, strong) NSMutableArray* votes;
 
 @property NSString* memberId;
 @property NSString* firstName;
 @property NSString* lastName;
 @property NSString* party;
 @property NSString* state;
+
+- (void) syncVotes: (APIRequestSuccessCallback) onsuccess onError: (APIRequestErrorCallback) onerror;
+- (void) addVote: (NYTVote*) vote;
 
 @end

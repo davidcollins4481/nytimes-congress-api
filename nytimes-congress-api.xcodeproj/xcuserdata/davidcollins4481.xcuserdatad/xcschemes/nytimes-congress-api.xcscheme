@@ -42,7 +42,7 @@
                   Identifier = "nytimes_congress_apiTests">
                </Test>
                <Test
-                  Identifier = "NYTSenateTests">
+                  Identifier = "NYTHouseOfRepsTests">
                </Test>
             </SkippedTests>
          </TestableReference>
