@@ -44,6 +44,9 @@
                <Test
                   Identifier = "NYTHouseOfRepsTests">
                </Test>
+               <Test
+                  Identifier = "NYTSenateTests/testStateMembers">
+               </Test>
             </SkippedTests>
          </TestableReference>
       </Testables>

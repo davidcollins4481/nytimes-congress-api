@@ -14,7 +14,6 @@
 @interface NYTMember : NSObject
 
 @property (nonatomic, strong) NSMutableArray* votes;
-
 @property NSString* memberId;
 @property NSString* firstName;
 @property NSString* lastName;

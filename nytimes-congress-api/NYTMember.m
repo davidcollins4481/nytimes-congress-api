@@ -62,14 +62,14 @@
                           } else {
                               NSDictionary *results = [dict objectForKey:@"results"][0];
                               // set the number of members
-                              NSDictionary *votes = [results objectForKey:@"votes"][0];
-                              for (NSDictionary *vote in votes) {
+                              NSDictionary *memberVotes = [results objectForKey:@"votes"];
+                              for (NSDictionary *vote in memberVotes) {
                                   NYTVote *v = [[NYTVote alloc] init];
                                   [v setMemberId:[vote objectForKey:@"member_id"]];
                                   [v setDescription:[vote objectForKey:@"description"]];
                                   [v setPosition:[vote objectForKey: @"position"]];
-                                  NSLog(@"Bill title: %@", [v position]);
-                                  [self addVote:vote];
+                                  //NSLog(@"Bill description: %@", [vote objectForKey:@"description"]);
+                                  [self addVote: v];
                               }
                                    
                               if (onSuccess != nil) {
