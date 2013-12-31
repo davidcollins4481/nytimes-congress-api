@@ -42,8 +42,8 @@
 
 - (void) addMember:(NYTMember *)member
 {
-    // TODO: put at end
-    [[self getMembers] insertObject:member atIndex:0];
+    NSMutableArray *members = [self getMembers];
+    [members insertObject:member atIndex:[members count]];
 }
 
 - (NSMutableArray *) membersFromState: (NSString*) abbreviation
