@@ -39,12 +39,6 @@
             </BuildableReference>
             <SkippedTests>
                <Test
-                  Identifier = "nytimes_congress_apiTests">
-               </Test>
-               <Test
-                  Identifier = "NYTHouseOfRepsTests">
-               </Test>
-               <Test
                   Identifier = "NYTSenateTests/testStateMembers">
                </Test>
             </SkippedTests>
