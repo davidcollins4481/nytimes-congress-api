@@ -21,6 +21,8 @@
 //- (NSMutableArray*) getMembers;
 - (void) addMember: (NYTMember *) member;
 
+- (NSMutableArray *) getMembers;
+
 // Ex: OH, ME
 - (NSMutableArray *) membersFromState: (NSString*) abbreviation;
 @end
