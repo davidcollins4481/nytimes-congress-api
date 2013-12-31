@@ -19,7 +19,7 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:apiUrl];
 
     [NSURLConnection sendAsynchronousRequest:request
-                             queue:[[NSOperationQueue alloc] init]//[NSOperationQueue mainQueue]
+                             queue:[[NSOperationQueue alloc] init]
                  completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
                      // TODO: better response handling. See:
                      // http://stackoverflow.com/questions/9270447/how-to-use-sendasynchronousrequestqueuecompletionhandler

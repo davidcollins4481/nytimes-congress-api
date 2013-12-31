@@ -53,14 +53,14 @@ NYTSenate *senate;
 
 - (void) testVotes
 {
-    NSMutableArray* OHSenators = [senate membersFromState:@"IL"];
+    NSMutableArray* OHSenators = [senate membersFromState:@"OH"];
     dispatch_semaphore_t holdOn = dispatch_semaphore_create(0);
     NYTSenator *first = OHSenators[0];
     [first syncVotes:
               ^(NSURLResponse* response, NSData* urlData) {
                   NSMutableArray *votes = [first votes];
                   for (NYTVote *v in votes) {
-                      NSLog(@"Name: %@, Bill position: %@", [first lastName], [v description]);
+                      NSLog(@"Name: %@ %@, Bill: %@. Vote: %@", [first firstName], [first lastName], [v description], [v position]);
                   }
                   dispatch_semaphore_signal(holdOn);
               }
