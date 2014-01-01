@@ -20,7 +20,7 @@
 @property NSString* party;
 @property NSString* state;
 
-- (NSString*) lineItemString;
+- (NSString*) nameString;
 - (void) syncVotes: (APIRequestSuccessCallback) onsuccess onError: (APIRequestErrorCallback) onerror;
 - (void) addVote: (NYTVote*) vote;
 

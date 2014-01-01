@@ -12,4 +12,5 @@
 
 @property NSString* district;
 
+- (NSString*) districtString;
 @end

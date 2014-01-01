@@ -87,9 +87,9 @@
     
 }
 
-- (NSString*) lineItemString
+- (NSString*) nameString
 {
-    return [NSString stringWithFormat: @"%@, %@ (%@ - %@)", [self lastName],[self firstName], [self party], [self state] ];
+    return [NSString stringWithFormat: @"%@, %@", [self lastName],[self firstName]];
 }
 
 @end
